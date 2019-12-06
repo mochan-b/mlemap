@@ -29,7 +29,7 @@ X : \Omega \rightarrow \mathbb{R} \; (\text{or something similar})
 $$
 and we denote $P(X=x)$ or $P_X(x)$ as 
 $$
-P_X(x) = \{ \omega \in \Omega, X(\omega) = x \}
+P_X(x) = P ( \{ \omega \in \Omega, X(\omega) = x \} )
 $$
 
 ---
@@ -65,7 +65,7 @@ $$
 
 - To estimate the parameter for the family of distributions, we take the mode of the distribution (or maximum)
 $$
-\theta_{MLE} = \argmax_\theta \mathcal{L}(\mathbf{x}|\theta)
+\theta_{MLE} = \max_\theta \mathcal{L}(\theta|\mathbf{x})
 $$
 
 - $f_X(\mathbf{x})$ is constant since it is $\int_\theta f_{X, \Theta} (x,\theta) d\theta$ and we integrate over all of $\theta$.
@@ -132,7 +132,7 @@ $$
 
 - $\mathbf{x}$ is the data-set and $\theta$ is the weights of the neural network
 - Data point $x_i$. Ground truth label $c_i$.
-- Neural network outputs $\mathbf{s_i}$ and $s_{c_i}$ is the output of the neural network for class $c$.
+- Neural network outputs $\mathbf{s_i}$. $s_{c_i}$ is the output of the neural network for class $c$
 - Using the training data as $P$ and the neural network output s $Q$, we define the cross entropy between $P$ and $Q$.
 - $P$ is zero for all classes except the truth label
 - Cross entropy formula which we use for likelihood
